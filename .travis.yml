@@ -5,7 +5,7 @@ node_js:
 services: 
     - docker
 before_install: 
-    - docker build -t yanbozhu/sample-app -f Dockerfile.dev .
+    - docker build -t yanbozhu/sample-app -f dockerfile.dev .
 script:     
     - docker run -e CI=true yanbozhu/sample-app npm run test -- --coverage --watchAll=false
 deploy:
